@@ -8,10 +8,8 @@ class ReferralServiceProvider extends ServiceProvider
 {
     /**
      * Register package services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
         // Merge the package's configuration file with the application's configuration
         $this->mergeConfigFrom(__DIR__.'/../../config/referral.php', 'referral');
@@ -19,10 +17,8 @@ class ReferralServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap package services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         // Load package migrations
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');

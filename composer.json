@@ -1,6 +1,7 @@
 {
     "name": "jijunair/laravel-referral",
     "description": "Laravel package for a referral system",
+    "version": "2.0.0",
     "keywords": [
         "jijunair",
         "laravel",
@@ -21,12 +22,12 @@
         }
     ],
     "require": {
-        "php": "^7.2|^7.3|^7.4|^8.0|^8.1|^8.2",
-        "illuminate/database": "^8.0|^9.0|^10.0|^11.0|^12.0",
-        "illuminate/auth": "^8.0|^9.0|^10.0|^11.0|^12.0"
+        "php": "^8.2",
+        "illuminate/database": "^12.0",
+        "illuminate/auth": "^12.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.4|^10.0|^11.0|^12.0"
+        "phpunit/phpunit": "^11.0|^12.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

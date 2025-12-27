@@ -6,6 +6,10 @@
         <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/jijunair/laravel-referral"></a>
         <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="License" src="https://img.shields.io/github/license/jijunair/laravel-referral"></a>
     </p>
+    <p align="center">
+        <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="PHP Version" src="https://img.shields.io/packagist/php-v/jijunair/laravel-referral.svg?style=flat-square"></a>
+        <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="Laravel Version" src="https://img.shields.io/badge/Laravel-12.x-brightgreen.svg?style=flat-square"></a>
+    </p>
 </p>
 
 

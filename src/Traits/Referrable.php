@@ -9,40 +9,32 @@ trait Referrable
 {
     /**
      * Get the referrals associated with the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function referrals()
+    public function referrals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Referral::class, 'referrer_id');
     }
 
     /**
      * Get the referral account of the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function referralAccount()
+    public function referralAccount(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Referral::class, 'id', 'user_id');
     }
 
     /**
      * Check if the user has a referral account.
-     *
-     * @return bool
      */
-    public function hasReferralAccount()
+    public function hasReferralAccount(): bool
     {
         return !is_null($this->referralAccount);
     }
 
     /**
      * Get the referral link for the user.
-     *
-     * @return string
      */
-    public function getReferralLink()
+    public function getReferralLink(): string
     {
         if ($this->hasReferralAccount()) {
             return url('/') . "/" . config('referral.route_prefix') . "/" . $this->getReferralCode();
@@ -52,10 +44,8 @@ trait Referrable
 
     /**
      * Get the referral code of the user's referral account.
-     *
-     * @return string|null
      */
-    public function getReferralCode()
+    public function getReferralCode(): ?string
     {
         if ($this->hasReferralAccount()) {
             return $this->referralAccount->referral_code;
@@ -66,11 +56,8 @@ trait Referrable
 
     /**
      * Create a referral account for the user.
-     *
-     * @param  int|null  $referrerID
-     * @return void
      */
-    public function createReferralAccount(int $referrerID = NULL)
+    public function createReferralAccount(?int $referrerID = null): void
     {
 
         $prefix = config('referral.ref_code_prefix');
@@ -86,12 +73,8 @@ trait Referrable
 
     /**
      * Generate a unique referral code.
-     *
-     * @param  string  $prefix
-     * @param  int  $length
-     * @return string
      */
-    private function generateUniqueReferralCode($prefix, $length)
+    private function generateUniqueReferralCode(string $prefix, int $length): string
     {
         $prefix = strtolower($prefix);
         // Generate an initial referral code

@@ -3,17 +3,16 @@
 namespace Jijunair\LaravelReferral\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cookie;
 
 class ReferralController extends Controller
 {
     /**
      * Assign a referral code to the user.
-     *
-     * @param  string  $referralCode
-     * @return RedirectResponse
      */
-    public function assignReferrer($referralCode)
+    public function assignReferrer(string $referralCode): RedirectResponse
     {
         $refCookieName = config('referral.cookie_name');
         $refCookieExpiry = config('referral.cookie_expiry');
@@ -29,10 +28,8 @@ class ReferralController extends Controller
 
     /**
      * Generate referral codes for existing users.
-     *
-     * @return JsonResponse
      */
-    public function createReferralCodeForExistingUsers()
+    public function createReferralCodeForExistingUsers(): JsonResponse
     {
         $userModel = resolve(config('referral.user_model'));
         $users = $userModel::cursor();

@@ -4,6 +4,7 @@ use Tests\TestCase;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Jijunair\LaravelReferral\Controllers\ReferralController;
 
 class ReferralControllerTest extends TestCase
 {
@@ -50,7 +51,8 @@ class ReferralControllerTest extends TestCase
     public function testCreateReferralCodeForExistingUsers()
     {
         // Create some dummy users
-        $users = factory(config('referral.user_model'), 5)->create();
+        $userModel = config('referral.user_model');
+        $users = $userModel::factory()->count(5)->create();
 
         // Define the route for generating referral codes for existing users
         Route::middleware('web')->get('generate-ref-accounts', [ReferralController::class, 'createReferralCodeForExistingUsers'])

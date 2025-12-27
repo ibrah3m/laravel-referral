@@ -18,33 +18,26 @@ class Referral extends Model
 
     /**
      * Get the user associated with the referral.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function user()
+    public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(config('referral.user_model'), 'user_id');
     }
 
     /**
      * Get the referrer associated with the referral.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function referrer()
+    public function referrer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(config('referral.user_model'), 'referrer_id');
     }
 
     /**
      * Retrieve the user by referral code.
-     *
-     * @param  string  $code
-     * @return mixed|null
      */
-    public static function userByReferralCode($code)
+    public static function userByReferralCode(string $code): mixed
     {
-        $referrer = self::where('referral_code',$code)->first();
+        $referrer = self::where('referral_code', $code)->first();
         if ($referrer) {
             return App::make(config('referral.user_model'))->find($referrer->user_id);
         }

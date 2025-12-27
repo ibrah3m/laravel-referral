@@ -33,18 +33,18 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Jijunair\\LaravelReferral\\": "src"
+            "Ibrah3m\\LaravelReferral\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jijunair\\LaravelReferral\\Tests\\": "tests"
+            "Ibrah3m\\LaravelReferral\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Jijunair\\LaravelReferral\\Providers\\ReferralServiceProvider"
+                "Ibrah3m\\LaravelReferral\\Providers\\ReferralServiceProvider"
             ]
         }
     }

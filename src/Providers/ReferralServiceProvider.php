@@ -1,6 +1,6 @@
 <?php
 
-namespace Jijunair\LaravelReferral\Providers;
+namespace Ibrah3m\LaravelReferral\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -39,8 +39,8 @@ class ReferralServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         
         // Bind the ReferralController to the application container
-        $this->app->bind('Jijunair\LaravelReferral\Controllers\ReferralController', function ($app) {
-            return new \Jijunair\LaravelReferral\Controllers\ReferralController();
+        $this->app->bind('Ibrah3m\LaravelReferral\Controllers\ReferralController', function ($app) {
+            return new \Ibrah3m\LaravelReferral\Controllers\ReferralController();
         });
     }
 }

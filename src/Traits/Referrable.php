@@ -1,9 +1,9 @@
 <?php
 
-namespace Jijunair\LaravelReferral\Traits;
+namespace Ibrah3m\LaravelReferral\Traits;
 
 use Illuminate\Support\Str;
-use Jijunair\LaravelReferral\Models\Referral;
+use Ibrah3m\LaravelReferral\Models\Referral;
 
 trait Referrable
 {

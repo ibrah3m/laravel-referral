@@ -1,6 +1,6 @@
 <?php
 
-namespace Jijunair\LaravelReferral\Controllers;
+namespace Ibrah3m\LaravelReferral\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;

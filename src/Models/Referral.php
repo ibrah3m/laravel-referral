@@ -1,6 +1,6 @@
 <?php
 
-namespace Jijunair\LaravelReferral\Models;
+namespace Ibrah3m\LaravelReferral\Models;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Database\Eloquent\Model;

@@ -2,9 +2,9 @@
 <p align="center">
     <img src="/images/header.jpeg" width="600" alt="Heading of Laravel Referral">
     <p align="center">
-        <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="Latest Version on Packagist" src="https://img.shields.io/packagist/v/jijunair/laravel-referral.svg?style=flat-square"></a>
-        <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/jijunair/laravel-referral"></a>
-        <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="License" src="https://img.shields.io/github/license/jijunair/laravel-referral"></a>
+        <a href="https://github.com/ibrah3m/laravel-referral"><img alt="Latest Version on GitHub" src="https://img.shields.io/github/v/tag/ibrah3m/laravel-referral?style=flat-square"></a>
+        <a href="https://github.com/ibrah3m/laravel-referral"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ibrah3m/laravel-referral?style=flat-square"></a>
+        <a href="https://github.com/ibrah3m/laravel-referral"><img alt="License" src="https://img.shields.io/github/license/ibrah3m/laravel-referral"></a>
     </p>
     <p align="center">
         <a href="https://packagist.org/packages/jijunair/laravel-referral"><img alt="PHP Version" src="https://img.shields.io/packagist/php-v/jijunair/laravel-referral.svg?style=flat-square"></a>
@@ -13,7 +13,7 @@
 </p>
 
 
-The **Laravel Referral** package (`jijunair/laravel-referral`) is a powerful and easy-to-use package for adding referral system functionality to your Laravel applications. With this package, you can effortlessly generate referral codes, track user referrals, and reward users based on their referrals.  
+The **Laravel Referral** package (`ibrah3m/laravel-referral`) is a powerful and easy-to-use package for adding referral system functionality to your Laravel applications. With this package, you can effortlessly generate referral codes, track user referrals, and reward users based on their referrals.
 
 ## Key Features  
 ✅ Generate unique referral codes for users  
@@ -23,6 +23,7 @@ The **Laravel Referral** package (`jijunair/laravel-referral`) is a powerful and
 ✅ Simple trait-based integration with your `User` model
 
 
+- [Key Features](#key-features)
 - [Installation](#installation)
     - [Configuration](#configuration)
     - [Migration](#migration)
@@ -36,7 +37,7 @@ The **Laravel Referral** package (`jijunair/laravel-referral`) is a powerful and
     - [Get All Referrals of a User](#get-all-referrals-of-a-user)
     - [Get the Referral Link of a User](#get-the-referral-link-of-a-user)
 - [Changelog](#changelog)
-- [Contribution](#contributing)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
@@ -44,13 +45,13 @@ The **Laravel Referral** package (`jijunair/laravel-referral`) is a powerful and
 You can install the package via Composer by running the following command:
 
 ```bash
-composer require jijunair/laravel-referral
+composer require ibrah3m/laravel-referral
 ```
 
 #### Configuration
 The package provides a configuration file that allows you to customize its behavior. You should publish the migration and the config/referral.php config file with:
 ```php
-php artisan vendor:publish --provider="Jijunair\LaravelReferral\Providers\ReferralServiceProvider"
+php artisan vendor:publish --provider="Ibrah3m\LaravelReferral\Providers\ReferralServiceProvider"
 ```
 After publishing, you can find the configuration file at config/referral.php.
 
@@ -76,7 +77,7 @@ After the config and migration have been published and configured, you can creat
 #### Add Trait
 Add the necessary trait to your User model:
 ```php
-use Jijunair\LaravelReferral\Traits\Referrable;
+use Ibrah3m\LaravelReferral\Traits\Referrable;
 
 class User extends Model
 {
@@ -106,7 +107,7 @@ This retrieves the referrer associated with the user.<br><br>
 #### Get Referrer by Referral Code
 To get the referrer by referral code, you can use the following code:
 ```php
-use Jijunair\LaravelReferral\Models\Referral;
+use Ibrah3m\LaravelReferral\Models\Referral;
 use Illuminate\Support\Facades\Cookie;
 
 $referralCode = Cookie::get(config('referral.cookie_name'));

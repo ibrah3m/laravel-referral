@@ -1,9 +1,9 @@
 {
-    "name": "jijunair/laravel-referral",
+    "name": "ibrah3m/laravel-referral",
     "description": "Laravel package for a referral system",
     "version": "2.0.0",
     "keywords": [
-        "jijunair",
+        "ibrah3m",
         "laravel",
         "referral",
         "affiliate",
@@ -12,13 +12,13 @@
         "referral-system",
         "user-referral"
     ],
-    "homepage": "https://github.com/jijunair/laravel-referral",
+    "homepage": "https://github.com/ibrah3m/laravel-referral",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jiju Nair",
-            "email": "hello@jijunair.com"
+            "name": "ibrah3m",
+            "email": "ibrah3m@users.noreply.github.com"
         }
     ],
     "require": {

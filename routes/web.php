@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Jijunair\LaravelReferral\Controllers\ReferralController;
+use Ibrah3m\LaravelReferral\Controllers\ReferralController;
 
 
 Route::middleware('web')->group(function () {

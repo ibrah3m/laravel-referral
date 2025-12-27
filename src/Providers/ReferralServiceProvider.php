@@ -2,6 +2,7 @@
 
 namespace Ibrah3m\LaravelReferral\Providers;
 
+use Ibrah3m\LaravelReferral\Commands\PublishReferralMigration;
 use Illuminate\Support\ServiceProvider;
 
 class ReferralServiceProvider extends ServiceProvider
@@ -20,19 +21,16 @@ class ReferralServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Load package migrations
-        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
-
         if ($this->app->runningInConsole()) {
             // Publish package's configuration file
             $this->publishes([
                 __DIR__.'/../../config/referral.php' => config_path('referral.php'),
             ], 'laravel-referral-config');
 
-            // Publish package's migration files
-            $this->publishes([
-                __DIR__.'/../../database/migrations' => database_path('migrations'),
-            ], 'laravel-referral-migrations');
+            // Register the custom command
+            $this->commands([
+                PublishReferralMigration::class,
+            ]);
         }
 
         // Load package's routes
